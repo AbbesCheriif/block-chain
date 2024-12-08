@@ -11,10 +11,10 @@ class FishController extends ChangeNotifier {
   List<Fish> fishes = [];
   bool isLoading = true;
   late int count;
-  final String _rpcUrl = "http://127.0.0.1:7545";
-  final String _wsUrl = "ws://127.0.0.1:7545";
+  final String _rpcUrl = "http://192.168.1.13:7545";
+  final String _wsUrl = "ws://192.168.1.13:7545";
   final String _privateKey =
-      "0x9d7e34a060c608f7c515ec4de041a733a6b6841788bedd0afe668ab22921ac25";
+      "0x428432da40e5e7308376a9308b8f682017c5073d6471abf76b10f22a68ad23cf";
 
   late Web3Client _client;
   late String _abiCode;

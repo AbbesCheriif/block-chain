@@ -6260,12 +6260,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xD90558135e843fF40F075a54678Cb83A74ef3b60",
-      "transactionHash": "0x977bc1d3a26c9f36725e6255a1e56660653d8eb75615d45f9e395f848f285def"
+      "address": "0xb3ef8a1Aee9B01343D57E0Ab8C7FF2f19EC1ab27",
+      "transactionHash": "0x7855efa535d81135f6534ce71dadb81701fb6a8fab106ed5663df59716b78c34"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-12-06T00:53:46.226Z",
+  "updatedAt": "2024-12-08T13:57:26.526Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

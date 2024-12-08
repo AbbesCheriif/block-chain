@@ -115,24 +115,24 @@ class _HomeScreenState extends State<HomeScreen> {
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
-                                      const SizedBox(height: 8),
-                                      Text(
-                                        'Image URL: ${fish.imageUrl}',
-                                        style: GoogleFonts.montserrat(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w500,
-                                          color: const Color(0xFF0C0A0A),
-                                        ),
-                                      ),
-                                      const SizedBox(height: 8),
-                                      Text(
-                                        'Location: ${fish.localisation}',
-                                        style: GoogleFonts.montserrat(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w500,
-                                          color: const Color(0xFF0C0A0A),
-                                        ),
-                                      ),
+                                      // const SizedBox(height: 8),
+                                      // Text(
+                                      //   'Image URL: ${fish.imageUrl}',
+                                      //   style: GoogleFonts.montserrat(
+                                      //     fontSize: 18,
+                                      //     fontWeight: FontWeight.w500,
+                                      //     color: const Color(0xFF0C0A0A),
+                                      //   ),
+                                      // ),
+                                      // const SizedBox(height: 8),
+                                      // Text(
+                                      //   'Location: ${fish.localisation}',
+                                      //   style: GoogleFonts.montserrat(
+                                      //     fontSize: 18,
+                                      //     fontWeight: FontWeight.w500,
+                                      //     color: const Color(0xFF0C0A0A),
+                                      //   ),
+                                      // ),
                                     ],
                                   ),
                                 ),

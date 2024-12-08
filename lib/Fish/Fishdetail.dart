@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'FishLinking.dart';
 import 'FishEdit.dart';
 import 'Fish.dart';
+import 'dart:io';
 
 class FishDetailScreen extends StatefulWidget {
   Fish? fish;
@@ -125,6 +126,7 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                   FishEditScreen(fish: widget.fish),
                             ),
                           );
+                          print("----url:  ${widget.fish!.imageUrl}");
                         },
                         child: Container(
                           padding: const EdgeInsets.all(10),
@@ -161,13 +163,40 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                     ),
                   ),
                   const SizedBox(height: 15),
-                  Text(
-                    widget.fish!.imageUrl,
-                    style: GoogleFonts.montserrat(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.grey[500],
-                    ),
+                  Center(
+                    child: widget.fish!.imageUrl.isNotEmpty
+                        ? (Uri.parse(widget.fish!.imageUrl).isAbsolute
+                            ? Image.network(
+                                widget.fish!.imageUrl,
+                                fit: BoxFit.cover,
+                                width: 200,
+                                height: 200,
+                                errorBuilder: (context, error, stackTrace) {
+                                  return const Icon(
+                                    Icons.broken_image,
+                                    size: 100,
+                                    color: Colors.grey,
+                                  );
+                                },
+                              )
+                            : Image.file(
+                                File(widget.fish!.imageUrl),
+                                fit: BoxFit.cover,
+                                width: 200,
+                                height: 200,
+                                errorBuilder: (context, error, stackTrace) {
+                                  return const Icon(
+                                    Icons.broken_image,
+                                    size: 100,
+                                    color: Colors.grey,
+                                  );
+                                },
+                              ))
+                        : const Icon(
+                            Icons.image_not_supported,
+                            size: 100,
+                            color: Colors.grey,
+                          ),
                   ),
                   const SizedBox(height: 15),
                   Text(

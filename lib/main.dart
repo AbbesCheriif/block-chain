@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
         create: (_) => FishController(), // Updated controller name
         child: MaterialApp(
-          debugShowCheckedModeBanner: false,
+          // debugShowCheckedModeBanner: false,
           title: 'My Fish App', // Updated app title
           theme: ThemeData(
             primarySwatch: Colors.blue,
